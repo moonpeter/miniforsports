@@ -39,6 +39,7 @@ ALLOWED_HOSTS = [
 
 INSTALLED_APPS = [
     'sports.apps.SportsConfig',
+    'crawling.apps.CrawlingConfig',
 
     'django.contrib.admin',
     'django.contrib.auth',
