@@ -19,6 +19,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # deploy-test/
 ROOT_DIR = os.path.dirname(BASE_DIR)
 
+TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
+
 # 각 application들의 static/폴더, STATICFILE_DIRS의 폴더들이 가진 정적파일들을 모을 폴더
 STATIC_ROOT = os.path.join(ROOT_DIR, '.static')
 STATIC_URL = '/static/'
@@ -66,7 +68,9 @@ ROOT_URLCONF = 'config.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            TEMPLATES_DIR,
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

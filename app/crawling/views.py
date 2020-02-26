@@ -1,6 +1,7 @@
 import urllib.request
 
 from bs4 import BeautifulSoup
+from django.shortcuts import render
 
 
 def get_soup(target_url):
@@ -25,3 +26,7 @@ for i in range(1, 7):
     target_url = 'http://euler.synap.co.kr/prob_list.php?pg={}'.format(i)
     soup = get_soup(target_url)
     extract_data(soup)
+
+
+def detail(request):
+    return render(request, 'crawling/crawling.html')
