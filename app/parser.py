@@ -13,7 +13,7 @@ from crawling.models import CrawlingData
 
 
 def parse_blog():
-    req = requests.get('https://bomi.github.io/beomi.github.io_old/')
+    req = requests.get('https://beomi.github.io/beomi.github.io_old/')
     html = req.text
     soup = BeautifulSoup(html, 'html.parser')
     my_titles = soup.select(
