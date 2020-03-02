@@ -20,10 +20,11 @@ from django.urls import path
 #     path('crawling/', include('crawling.urls.apis')),
 # ]
 from crawling import views
+from crawling.views import DetailView
 from sports.views import base_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', base_view, name='base_view'),
-    path('crawling/', views.detail, name='detail'),
+    path('crawling/', DetailView.as_view(), name='detail'),
 ]
