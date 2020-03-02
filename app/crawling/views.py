@@ -1,7 +1,15 @@
 from django.shortcuts import render
+from django.views.generic import TemplateView, RedirectView
+
+from .models import CrawlingData
 
 
-def detail(request):
-    XXX = XXX.objects.all()
-    context = {:}
-    return render(request, 'crawling/crawling.html', context)
+class DetailView(TemplateView):
+    template_name = 'crawling/crawling.html'
+
+# def detail(request):
+#     crawlings = CrawlingData.objects.all()
+#     context = {
+#         'crawlingdata': CrawlingData,
+#     }
+#     return render(request, 'crawling/crawling.html', context)
