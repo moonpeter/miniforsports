@@ -1,17 +1,9 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Crawling!!!!</h1>
-<<<<<<< HEAD
-{% if %}
-<ul>
-    {% for in %}
-    <li></li>
-    {% endfor %}
-</ul>
-{% endif %}
-=======
-
->>>>>>> b9fb6e2ce7b392ffa39aa1e22a75c0db0aa8fad5
-
+<form>
+    {% csrf_token %}
+    <h1>!!!!!!!!!</h1>
+    {{ form }}
+</form>
 {% endblock %}
